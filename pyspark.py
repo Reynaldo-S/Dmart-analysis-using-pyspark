@@ -100,6 +100,7 @@ total_quantity_by_city = combined_df.groupBy("City").sum("Quantity")
 total_quantity_by_city.show()
 
 # customer segment has the highest profit margin
-highest_profit_segment = combined_df.groupBy("Segment").sum("Profit").orderBy("sum(Profit)", ascending=False).show(1)
+highest_profit_segment = combined_df.groupBy("Segment").sum("Profit").orderBy("sum(Profit)", ascending=False)
+highest_profit_segment.show(1)
 
 
